@@ -17,6 +17,8 @@
 		8485FB9B276A033400C66744 /* Local_NotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485FB9A276A033400C66744 /* Local_NotificationTests.swift */; };
 		8485FBA5276A033400C66744 /* Local_NotificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485FBA4276A033400C66744 /* Local_NotificationUITests.swift */; };
 		8485FBA7276A033400C66744 /* Local_NotificationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485FBA6276A033400C66744 /* Local_NotificationUITestsLaunchTests.swift */; };
+		8485FBB4276A1C8F00C66744 /* TimerEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485FBB3276A1C8F00C66744 /* TimerEnums.swift */; };
+		8485FBB8276B155A00C66744 /* LogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485FBB7276B155A00C66744 /* LogsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		8485FBA0276A033400C66744 /* Local NotificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Local NotificationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8485FBA4276A033400C66744 /* Local_NotificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Local_NotificationUITests.swift; sourceTree = "<group>"; };
 		8485FBA6276A033400C66744 /* Local_NotificationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Local_NotificationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8485FBB3276A1C8F00C66744 /* TimerEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEnums.swift; sourceTree = "<group>"; };
+		8485FBB7276B155A00C66744 /* LogsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				8485FB8E276A033400C66744 /* LaunchScreen.storyboard */,
 				8485FB91276A033400C66744 /* Info.plist */,
 				8485FB89276A033300C66744 /* Local_Notification.xcdatamodeld */,
+				8485FBB3276A1C8F00C66744 /* TimerEnums.swift */,
+				8485FBB7276B155A00C66744 /* LogsTableViewController.swift */,
 			);
 			path = "Local Notification";
 			sourceTree = "<group>";
@@ -261,7 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8485FBB8276B155A00C66744 /* LogsTableViewController.swift in Sources */,
 				8485FB8B276A033300C66744 /* Local_Notification.xcdatamodeld in Sources */,
+				8485FBB4276A1C8F00C66744 /* TimerEnums.swift in Sources */,
 				8485FB85276A033300C66744 /* ViewController.swift in Sources */,
 				8485FB81276A033300C66744 /* AppDelegate.swift in Sources */,
 				8485FB83276A033300C66744 /* SceneDelegate.swift in Sources */,
