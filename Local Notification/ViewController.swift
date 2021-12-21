@@ -4,7 +4,7 @@
 //  Local Notification
 //
 //  Created by administrator on 15/12/2021.
-//
+// https://programmingwithswift.com/how-to-send-local-notification-with-swift-5/
 
 import UIKit
 import UserNotifications
