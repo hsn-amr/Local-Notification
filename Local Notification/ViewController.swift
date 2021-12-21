@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     var timers = [Int]()
     var selectedTimer = Timers.five.rawValue
+    var didTimeFinish = false
     
     let userNotificationCenter = UNUserNotificationCenter.current()
     override func viewDidLoad() {
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
         pickerTimer.dataSource = self
         pickerTimer.delegate = self
         timers = getAllTimersValues()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -197,6 +199,20 @@ class ViewController: UIViewController {
         }
         return timers
     }
+    
+    func timeOver(){
+        if didTimeFinish {
+            (UIApplication.shared).applicationIconBadgeNumber = 0
+            totalTime.text = "Total Time: 00"
+            hoursAndMins.text = "0 Hours, 0 Mins"
+            settingTimer.text = "Time Over"
+            localNotification.text = ""
+            addLog(log: "Time Over")
+            startTimerButton.isEnabled = true
+            cancelButton.isEnabled = false
+            didTimeFinish = false
+        }
+    }
 }
 
 extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
@@ -222,17 +238,18 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
 extension ViewController: UNUserNotificationCenterDelegate{
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        didTimeFinish = true
+        timeOver()
+        print("recive")
         completionHandler()
     
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        didTimeFinish = true
+        timeOver()
         completionHandler([.alert, .badge, .sound])
-        totalTime.text = "Total Time: 00"
-        hoursAndMins.text = "0 Hours, 0 Mins"
-        settingTimer.text = "Time Over"
-        localNotification.text = ""
-        addLog(log: "Time Over")
-        startTimerButton.isEnabled = true
-        cancelButton.isEnabled = false
+        print("present")
     }
+    
+    
 }
